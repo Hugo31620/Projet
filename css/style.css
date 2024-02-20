@@ -3,8 +3,9 @@
     font-family: 'Raleway', sans-serif;
 }
 
+/***** HEADER *****/
 header { /* Bordure*/
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 .navigation { /* Aligner sur une ligne le header */
@@ -27,89 +28,144 @@ header { /* Bordure*/
 
 .lien a:hover { /* Création de la bordure et modification de l'espacement */
     border-top: 2px solid #0065FC;
-    padding-top: 25px;
+    padding-top: 18px;
+    color: #0065FC;
 }
 
-h1 {
+/***** BODY *****/
+.headline {
+    margin: 8px;
+}
+
+.headline h1 {
     margin-bottom: -10px;
+    font-weight: 700;  /** épaisseur du texte **/
+    font-size: 22px;   /** taille de police **/
+    line-height: 26px;  /** espacement des lignes **/
+    padding-left: 0;
+
 }
 
+.headline p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+/***** FORMULAIRE *****/
 .formulaire {
     display: flex;
     justify-content: flex-start;
 }
 
-.fa-location-dot {
-    color: black;
-    border: none;
-    font-size: 1.25em;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+#partie1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F2F2F2;         /** création d'une bordure **/
+    border-radius: 15px 0px 0px 15px;    /** angle de la bordure **/
+    width: 50px;
+    height: 49px;
+    margin: 10px;
 }
 
-#partie2 {
-    border: 0;
-    font-size: 1.25em;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
+input {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 16px 15px 16px;
+    line-height: 21px;
+    margin: 10px 0px 10px 0px;
+    border: none;
+}
+
+::placeholder {
+    color: #000;
 }
 
 .button1 {
     background-color: #0065FC;
-    color: #DEEBFF;
+    color: #FFFF;
+    width: 132px;
+    height: 49px;
     border-radius: 0 15px 15px 0;
-    font-size: 1.25em;
+    font-size: 18px;
     font-weight: 700;
-    border: none;
-    font-size: 1.25em;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-right: 20px;
+    border: 1px;
+    padding: 15px 16px 15px 16px;
+    margin: 10px 10px 10px 1px;
+    line-height: 21px;
 }
 
+.search {
+    display: none;
+}
+
+input:hover {
+    background-color: #DEEBFF;
+}
+
+#icon {
+    color: #000;
+    font-size: 18px;
+}
+
+/***** FILTRES  *****/
 .filtres {
     display: flex;
     justify-content: flex-start;
+    padding-left: 0px;
+    margin-top: 10px;
 }
 
 .filtres h1 {
-    font-size: 1.25em;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    padding: 8px;
 }
 
 .filtres button {
     color: black;
-    padding: 10px 10px;
-    border: grey;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.button2, .button3, .button4, .button5 {
-    background-color: #0065FC;
-    color: #DEEBFF;
-    border-radius: 100%;
-    font-size: 1.25em;
+    background-color: white;
     font-weight: 700;
-    border: none;
-    font-size: 1.25em;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-right: 20px;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 10px 15px 10px 15px;
+    border: 2px solid #c1c1c1;
+    border-radius: 25px;
+    margin: 10px;
+    width: 162px;
+    height: 50px;
 }
 
 .filtres button:hover {
-    background-color: green;
+    background-color: #DEEBFF;
 }
 
+/***** INFO BAR *****/
+.info-bar {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.info-bar i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+    border-radius: 25px;
+    margin: 15px;
+}
+
+.info-bar p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+/***** CODE PRESENT *****/
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
@@ -127,13 +183,13 @@ body {
 
 .main-container {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1440px;  /** largeur maximum de 1440 px **/
     padding: 0 50px;
-    box-sizing: border-box;
+    box-sizing: border-box;  /** définit la manière dont la taille totale d'un élément est calculée **/
 }
 
 a {
-    color: inherit;
+    color: inherit; /** meme couleur que son parents **/
     text-decoration: none;
 }
 
@@ -146,11 +202,11 @@ a {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));   /** effet de la card **/
 }
 
 .card img {
-    object-fit: cover;
+    object-fit: cover;  /** adapte l'image pour remplir le conteneur  **/
 }
 
 .card-title {
@@ -174,18 +230,86 @@ a {
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
-    padding: 30px;
+    padding-bottom: 30px;
     box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    padding-top: 30px;
+}
+
+.ligne {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;  /** retour a la ligne **/
+    height: auto;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.hebergements-cards {
+    width: 30%;
+    height: auto;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.hebergements-cards a {
+    display: block;
+}
+
+.hebergements-cards .card {
+    display: block; /** occupe toute la largeur et demarre sur une nouvelle ligne **/
+    margin-top: 33px;
+    box-sizing: border-box;  /** taille de la bordure, du padding et du contenu **/
+}
+
+.hebergements-cards img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.hebergements-cards .card-content {
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergements-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+.hebergements h3 {
+    padding-left: 30px;
 }
 
 /****** Populaires ***********/
 .populaires {
     width: 32%;
+    padding-top: 30px;
 }
 
 .populaires-title {
@@ -228,8 +352,52 @@ a {
     margin-bottom: 5px;
 }
 
+/***** ACTIVITES *****/
+.activite {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.activite img {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px 20px 0 0;
+}
+
+.activite-title {
+    padding-left: 30px;
+}
+
+.activite a {
+    width: 25%;
+}
+
+.activite .card-txt h3 {
+    padding-left: 15px;
+}
 
 
+/***** FOOTER *****/
+footer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 250px; /** espacement entre les listes **/
+}
+
+ul {
+    list-style: none; /** eneleve le style par defaut **/
+    padding-left: 0;
+}
+
+footer h3 {
+    margin: 0;
+}
+
+footer li {
+    padding: 7px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -269,6 +437,146 @@ a {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
-    /* ... */
+@media (min-width: 320px) and (max-width: 767.98px) {
+
+    .main-container {
+        padding: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .navigation {  /** HEADER **/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo img {
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    .lien {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .lien a {
+        display: flex;;
+        justify-content:center;
+        width: 50%; /** largeur du lien */
+    }
+
+    .lien a:hover { /* Création de la bordure et modification de l'espacement */
+        border-bottom: 2px solid #0065FC;
+        padding-bottom: 15px;
+        transform: translateY(-18px); /* Déplace le contenu vers le haut pour compenser */
+        border-top: none;
+        color: #0065FC;
+        margin-bottom: -40px;
+        }
+
+    .filtres {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .filtres h1 {
+        display: flex;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .button1 {
+        display: none;
+    }
+
+    .search {
+        display: block;
+        background-color: #0065FC;
+        width: 50px;
+        height: 50px;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 18px;
+        border: 1px;
+        margin: 10px 10px 10px 1px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    #recherche {
+        color: white;
+        font-weight: 700;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements-cards {
+        width: 100%;
+    }
+
+    .hebergements {
+        width: 100%;
+        order: 2;
+    }
+
+    .ligne {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+        order: 1;
+    }
+
+    .populaires-cards, .hebergements-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a, .hebergements-cards a {
+        width: 100%;
+    }
+
+    .populaires-cards .card-title, .hebergements-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle, .hebergements-cards .card-subtitle {
+        font-size: 13px;
+    }
+
+    .activite {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 50px;
+        padding-left: 0;
+        justify-content: flex-start;
+    }
+
+    #section-activites.activite-title {
+        padding-left: 0;
+    }
+
+    .activite a {
+        width: 100%;
+    }
+
+    .activite img {
+        height: 150px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 90%;
+    }
 }
