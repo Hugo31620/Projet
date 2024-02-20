@@ -3,6 +3,113 @@
     font-family: 'Raleway', sans-serif;
 }
 
+header { /* Bordure*/
+    padding: 20px 0px;
+}
+
+.navigation { /* Aligner sur une ligne le header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img { /* Modificationd de la taille du Logo */
+    width: 60px;
+}
+
+.lien {
+    margin-left: auto; /* Mettre les deux liens a droite */
+}
+
+.lien a:first-child { /* Selectionner le premier lien pour l'espacer du deuxieme*/
+    margin-right: 50px;
+}
+
+.lien a:hover { /* Création de la bordure et modification de l'espacement */
+    border-top: 2px solid #0065FC;
+    padding-top: 25px;
+}
+
+h1 {
+    margin-bottom: -10px;
+}
+
+.formulaire {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fa-location-dot {
+    color: black;
+    border: none;
+    font-size: 1.25em;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#partie2 {
+    border: 0;
+    font-size: 1.25em;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.button1 {
+    background-color: #0065FC;
+    color: #DEEBFF;
+    border-radius: 0 15px 15px 0;
+    font-size: 1.25em;
+    font-weight: 700;
+    border: none;
+    font-size: 1.25em;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+.filtres {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.filtres h1 {
+    font-size: 1.25em;
+}
+
+.filtres button {
+    color: black;
+    padding: 10px 10px;
+    border: grey;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button2, .button3, .button4, .button5 {
+    background-color: #0065FC;
+    color: #DEEBFF;
+    border-radius: 100%;
+    font-size: 1.25em;
+    font-weight: 700;
+    border: none;
+    font-size: 1.25em;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+.filtres button:hover {
+    background-color: green;
+}
+
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
