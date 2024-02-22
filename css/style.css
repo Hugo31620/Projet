@@ -6,6 +6,7 @@
 /***** HEADER *****/
 header { /* Bordure*/
     padding: 10px 0px;
+    margin-bottom: 40px;
 }
 
 .navigation { /* Aligner sur une ligne le header */
@@ -16,6 +17,7 @@ header { /* Bordure*/
 
 .logo img { /* Modificationd de la taille du Logo */
     width: 60px;
+    padding-left: 10px;
 }
 
 .lien {
@@ -459,7 +461,6 @@ footer li {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding-bottom: 20px;
     }
 
     .lien a {
